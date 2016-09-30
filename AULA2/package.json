@@ -1,0 +1,11 @@
+{
+  "name": "aula2",
+  "version": "1.0.0",
+  "description": "metodos http basicos",
+  "main": "server.js",
+  "scripts": {
+    "test": "node server.js"
+  },
+  "author": "sonecabr",
+  "license": "ISC"
+}
