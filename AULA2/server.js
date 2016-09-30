@@ -1,7 +1,7 @@
 //importa a lib de http
 var http = require('http');
 var url = require('url');
-var qs = require('querystring');
+
 
 
 http.createServer(function(request, response){
@@ -12,6 +12,9 @@ http.createServer(function(request, response){
         idade = parseInt(urlParts.query.idade);
         if(idade > 30){
             response.end('\nOI '+ nome +', Voce fez uma requisicao do tipo GET e voce e velho\n');
+        } else if(idade < 18) {
+          response.statusCode = 403;
+          response.end('\nOI '+ nome +', Voce fez uma requisicao do tipo GET e voce nao tem idade para acessar este site\n');
         } else {
             response.end('\nOI '+ nome +', Voce fez uma requisicao do tipo GET e voce e novo\n');
         }
