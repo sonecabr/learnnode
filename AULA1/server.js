@@ -2,5 +2,5 @@
 var http = require('http');
 
 http.createServer(function(request, response){
-    response.end("Ola Node!");
+    response.end("{\"probe\":{\"uptime\":\"10days\", \"status\":\"OK\"}}");
 }).listen(8080);
